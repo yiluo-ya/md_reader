@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MD 阅读器</title>
+<link rel="stylesheet" href="vendor/katex/katex.min.css">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<div id="progress"></div>
+<button id="sidebar-toggle" class="sidebar-toggle" title="收拢/展开文件栏">☰</button>
+<button id="toc-toggle" class="toc-toggle" title="收拢/展开目录">☰</button>
+<div id="tool-rail">
+  <button id="theme-btn" class="rail-btn" title="切换深/浅色">◐</button>
+  <button id="font-btn" class="rail-btn" title="字号：小/中/大">A</button>
+  <button id="pdf-zoom-out" class="rail-btn" title="缩小" style="display:none">−</button>
+  <button id="pdf-zoom-in" class="rail-btn" title="放大" style="display:none">＋</button>
+  <button id="btnEdit" class="rail-btn" title="编辑/预览切换">✎</button>
+</div>
+<div id="app">
+<aside id="sidebar">
+  <div class="side-head">
+    <h1>MD 阅读器</h1>
+  </div>
+  <div class="filter-box">
+    <input id="file-filter" type="search" placeholder="筛选文件名 / 路径…" autocomplete="off">
+  </div>
+  <div class="sect">内部文档</div>
+  <nav id="filelist"></nav>
+</aside>
+<div id="sidebar-resizer" title="拖动调整文件栏宽度"></div>
+
+<aside id="toc-sidebar">
+  <div class="toc-head"><span>目录</span></div>
+  <nav id="tocnav"></nav>
+</aside>
+
+<main>
+  <div id="empty">
+    <div class="big">MD 阅读器</div>
+    <div>从左侧文件树选择文档开始阅读</div>
+    <div class="drop-hint">右键文件：打开 / 编辑 / 重命名 / 删除<br>右键文件夹：新建 / 重命名 / 删除<br>右键列表空白处：设置根目录 / 刷新 / 新建</div>
+  </div>
+  <div id="articles"></div>
+</main>
+</div>
+<div id="lightbox"><img alt=""></div>
+
+<script src="vendor/katex/katex.min.js"></script>
+<script src="vendor/katex/auto-render.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

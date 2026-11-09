@@ -1,0 +1,6 @@
+{
+  "root": "D:\\path\\to\\your\\docs",
+  "externals": [
+    "D:\\path\\to\\another\\docs"
+  ]
+}
